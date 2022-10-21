@@ -13,7 +13,7 @@ body {
   color: #2c3e50;
   background-color: #f1f4f6;
   height: 100vh;
-  padding-top: 70px;
+  padding-bottom: 50px;
 }
 
 .poke-api-logo {
@@ -59,10 +59,7 @@ body {
 }
 
 @media only screen and (max-width: 40em) {
-  html,
-  body {
-    padding-top: 70px;
-  }
+
   .poke-card {
     width: 300px;
   }
