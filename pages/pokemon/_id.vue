@@ -101,7 +101,7 @@
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'Idpage',
   data() {
     return {
       pokemon: [],
