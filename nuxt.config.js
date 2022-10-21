@@ -36,7 +36,7 @@ export default {
     host: '0.0.0.0',
   },
   router: {
-    base: '/copybase-pokeapi',
+    base: '/nuxt-copybase-pokeapi',
     mode: 'hash',
   },
   generate: {
