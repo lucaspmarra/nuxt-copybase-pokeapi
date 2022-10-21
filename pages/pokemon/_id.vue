@@ -1,6 +1,6 @@
 <template>
   <div
-    class="d-flex flex-column min-vh-100 justify-content-center align-items-center id-card"
+    class="d-flex flex-column justify-content-center align-items-center id-card"
   >
     <article v-if="error">
       <p>Sorry, We Couldn't Connect You! Please try again later.</p>
