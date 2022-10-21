@@ -18,6 +18,9 @@ export default {
   components: true,
   buildModules: ['@nuxtjs/eslint-module'],
   modules: ['bootstrap-vue/nuxt', '@nuxtjs/axios'],
+  bootstrapVue: {
+    icons: true,
+  },
   build: {},
   loading: {
     color: 'blue',

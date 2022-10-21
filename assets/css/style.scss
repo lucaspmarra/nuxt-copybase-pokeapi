@@ -14,3 +14,48 @@ body {
   background-color: #f1f4f6;
   min-height: 100vh;
 }
+
+.poke-api-logo {
+  width: 100px;
+}
+
+.poke-card {
+  width: 550px;
+}
+
+.poke-card-selected {
+  margin-top: 20px;
+  width: 500px;
+}
+
+.poke-text {
+  text-transform: capitalize;
+}
+.navbar {
+  background-color: white;
+}
+
+@media only screen and (max-width: 40em) {
+  .poke-card {
+    width: 300px;
+  }
+  .poke-card-selected {
+    margin-top: 20px;
+    width: 300px;
+  }
+  .about-card {
+    width: 300px;
+  }
+  .poke-api-logo {
+    width: 50px;
+  }
+  .icon-navigation {
+    text-align: center;
+  }
+  .text-navigation {
+    font-size: 10px;
+  }
+  .navbar {
+    background-color: white;
+  }
+}

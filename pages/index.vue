@@ -1,38 +1,48 @@
 <template>
-  <div class="container">
-    <h1>PokeAPI</h1>
-
-    <article v-if="error">
-      <p>
-        Não foi possível realizar a requisição no momento, por favor, tente
-        novamente mais tarde.
-      </p>
-      <p>Stacktrace: {{ error.message }}</p>
-    </article>
-
+  <div
+    class="d-flex flex-column min-vh-100 justify-content-center align-items-center"
+  >
     <article>
-      <section class="mb-5">
-        <b-form-input
-          v-model="pokemonName"
-          class="mb-2 mr-sm-2 mb-sm-0 w-25"
-          type="search"
-          placeholder="Enter your name"
-        ></b-form-input>
-        <div class="mt-2">Value: {{ pokemonName }}</div>
-        <b-button variant="primary" @click="onSubmit"
-          >Search a pokemon</b-button
-        >
-      </section>
+      <section>
+        <b-card class="poke-card">
+          <b-form-group
+            id="input-group-1"
+            label="Pokemon name:"
+            label-for="pokemon-name"
+            :description="`You can find pokemon list here: ${list}`"
+          >
+            <b-form-input
+              id="pokemon-name"
+              v-model="pokemonName"
+              class="mb-2 mr-sm-2 mb-sm-0"
+              type="search"
+              placeholder="Please type a Pokemon name"
+            ></b-form-input>
+          </b-form-group>
+          <b-button variant="primary" @click="onSubmit">Search</b-button>
 
-      <section v-if="loading">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </section>
+          <b-card-text class="mt-4">
+            <article v-if="pokemon.name">
+              <h4>Pokemon:</h4>
+              <NuxtLink
+                :to="`/pokemon/${pokemon.id}`"
+                class="poke-text"
+                prefetch
+                >{{ pokemon.name }}</NuxtLink
+              >
+            </article>
 
-      <section class="mb-2">
-        <h4>Name:</h4>
-        <NuxtLink :to="`/pokemon/${pokemon.id}`" prefetch>{{ pokemon.name }}</NuxtLink>
+            <article v-if="loading">
+              <div class="spinner-border" role="status"></div>
+              <span class="visually-hidden">Loading...</span>
+            </article>
+
+            <article v-if="error">
+              <p>Sorry, We Couldn't Connect You! Please try again later.</p>
+              <p>Stacktrace: {{ error.message }}</p>
+            </article>
+          </b-card-text>
+        </b-card>
       </section>
     </article>
   </div>
@@ -47,15 +57,17 @@ export default {
       pokemon: {},
       loading: false,
       error: false,
+      list: 'https://pokeapi.co/api/v2/pokemon/',
     }
   },
   methods: {
     async onSubmit() {
+      this.loading = true
       try {
         const response = await this.$axios.get(
           `https://pokeapi.co/api/v2/pokemon/${this.pokemonName}`
         )
-        this.loading = true
+        this.error = false
         this.pokemon = response.data
         // eslint-disable-next-line no-console
         console.log(response.data)
