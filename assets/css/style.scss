@@ -28,11 +28,18 @@ body {
   width: 500px;
 }
 
+.about-card {
+  width: 550px;
+}
+
 .poke-text {
   text-transform: capitalize;
 }
 .navbar {
   background-color: white;
+}
+.mobile-navbar {
+  display: none;
 }
 
 @media only screen and (max-width: 40em) {
@@ -58,4 +65,5 @@ body {
   .navbar {
     background-color: white;
   }
+
 }

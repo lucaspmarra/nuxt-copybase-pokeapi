@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <b-navbar id="navbar" class="shadow navbar" type="light">
+  <b-navbar id="navbar" class="shadow navbar mobile-navbar" type="light">
     <b-navbar-brand>
       <img
         alt="Ir para a página Inicial da página Bem Cuidar - Eleições 2022"
