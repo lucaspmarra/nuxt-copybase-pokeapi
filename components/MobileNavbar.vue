@@ -2,7 +2,7 @@
 <template>
   <b-navbar
     id="navbar"
-    class="shadow navbar d-none d-sm-block d-md-none fixed-bottom"
+    class="shadow navbar d-lg-none fixed-bottom"
     type="light"
   >
     <b-navbar-brand>

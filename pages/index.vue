@@ -22,7 +22,7 @@
               type="search"
               placeholder="Please type a Pokemon name"
             ></b-form-input>
-            
+
             <p class="mt-1">
               You can find pokemon list here:
               <a href="https://pokeapi.co/api/v2/pokemon/"
