@@ -3,8 +3,6 @@
   <div>
     <Navbar />
     <Nuxt />
-    <div class="mt-5">
-      <Mobile-navbar />
-    </div>
+    <Mobile-navbar />
   </div>
 </template>
