@@ -54,6 +54,12 @@
             <article v-if="error">
               <p>Sorry, We Couldn't Connect You! Please try again later.</p>
               <p>Stacktrace: {{ error.message }}</p>
+              <b-img
+                center
+                class="pokemon-photo-about"
+                src="../assets/img/pikachu.gif"
+                alt="pikachu on hospital due error"
+              />
             </article>
           </b-card-text>
         </b-card>

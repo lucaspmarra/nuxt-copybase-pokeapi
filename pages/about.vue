@@ -2,6 +2,11 @@
   <div
     class="d-flex flex-column mt-5 justify-content-center align-items-center"
   >
+    <b-img
+      class="pokemon-photo-about"
+      src="../assets/img/squirtle.png"
+      alt="image of squirtle jumping of happiness"
+    />
     <b-card class="about-card">
       <p>
         Reference:
