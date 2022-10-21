@@ -1,6 +1,10 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <b-navbar id="navbar" class="shadow navbar d-lg-none d-xl-block sticky-bottom" type="light">
+  <b-navbar
+    id="navbar"
+    class="shadow navbar d-lg-none d-xl-block fixed-bottom"
+    type="light"
+  >
     <b-navbar-brand>
       <img
         alt="Go to home page"

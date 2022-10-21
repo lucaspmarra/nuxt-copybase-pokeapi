@@ -14,7 +14,6 @@
             id="input-group-1"
             label="Pokemon name:"
             label-for="pokemon-name"
-            :description="`You can find pokemon list here: ${list}`"
           >
             <b-form-input
               id="pokemon-name"
@@ -23,6 +22,13 @@
               type="search"
               placeholder="Please type a Pokemon name"
             ></b-form-input>
+            
+            <p class="mt-1">
+              You can find pokemon list here:
+              <a href="https://pokeapi.co/api/v2/pokemon/"
+                >https://pokeapi.co/api/v2/pokemon/</a
+              >
+            </p>
           </b-form-group>
           <b-button variant="primary" @click="onSubmit">Search</b-button>
 
@@ -62,7 +68,6 @@ export default {
       pokemon: {},
       loading: false,
       error: false,
-      list: 'https://pokeapi.co/api/v2/pokemon/',
     }
   },
   methods: {
