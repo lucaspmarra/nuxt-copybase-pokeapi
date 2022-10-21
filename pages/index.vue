@@ -18,6 +18,7 @@
             <b-form-input
               id="pokemon-name"
               v-model="pokemonName"
+              autocapitalize="none"
               class="mb-2 mr-sm-2 mb-sm-0"
               type="search"
               placeholder="Please type a Pokemon name"
@@ -30,7 +31,9 @@
               >
             </p>
           </b-form-group>
-          <b-button variant="primary" @click="onSubmit">Search</b-button>
+          <b-button variant="primary" @click.prevent="onSubmit"
+            >Search</b-button
+          >
 
           <b-card-text class="mt-4">
             <article v-if="pokemon.name">
@@ -75,12 +78,15 @@ export default {
       this.loading = true
       try {
         const response = await this.$axios.get(
-          `https://pokeapi.co/api/v2/pokemon/${this.pokemonName}`
+          `https://pokeapi.co/api/v2/pokemon/${this.pokemonName
+            .toLowerCase()
+            .trim()}`
         )
         this.error = false
         this.pokemon = response.data
       } catch (e) {
         this.error = e
+        this.pokemon.name = ''
       } finally {
         this.loading = false
       }

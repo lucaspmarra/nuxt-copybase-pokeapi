@@ -1,6 +1,6 @@
 <template>
   <div
-    class="d-flex flex-column min-vh-100 justify-content-center align-items-center"
+    class="d-flex flex-column mt-5 justify-content-center align-items-center"
   >
     <b-card class="about-card">
       <p>

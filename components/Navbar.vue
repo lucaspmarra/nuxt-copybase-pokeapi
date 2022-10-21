@@ -1,6 +1,11 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <b-navbar id="navbar" class="shadow navbar sticky-top" toggleable="sm" type="light">
+  <b-navbar
+    id="navbar"
+    class="shadow navbar sticky-top"
+    toggleable="sm"
+    type="light"
+  >
     <b-navbar-nav>
       <b-link to="/">
         <img
@@ -9,6 +14,10 @@
           src="../assets/img/pokeapi.png"
         />
       </b-link>
+
+      <b-nav-item to="/"> Home </b-nav-item>
+
+      <b-nav-item to="/about"> About </b-nav-item>
     </b-navbar-nav>
   </b-navbar>
 </template>
