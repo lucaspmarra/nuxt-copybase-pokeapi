@@ -1,5 +1,7 @@
 # nuxt-copybase-pokeapi
 
+https://lucaspmarra.github.io/nuxt-copybase-pokeapi/
+
 ## Build Setup
 
 ```bash
