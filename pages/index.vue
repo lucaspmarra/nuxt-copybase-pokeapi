@@ -22,6 +22,7 @@
               class="mb-2 mr-sm-2 mb-sm-0"
               type="search"
               placeholder="Please type a Pokemon name"
+              @keyup.enter="onSubmit"
             ></b-form-input>
 
             <p class="mt-1">
