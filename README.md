@@ -1,70 +1,106 @@
-# nuxt-copybase-pokeapi
+# Nuxt Copybase Test
 
-https://lucaspmarra.github.io/nuxt-copybase-pokeapi/
+### Prerequisites
+- Node.js >= v16.18.0
+- Yarn (or NPM)
 
-## Build Setup
+### Stack
+- Nuxt 2
+- Vue 2
+	- Options API
+	- Event handler
+- Axios
+- EsLint (default rules)
+- Prettier (default rules)
+- Bootstrap-vue
+- Static files
 
-```bash
-# install dependencies
-$ yarn install
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+# Installing dependencies and starting dev server
 
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+Run `yarn` or `npm install` to install project dependeNcies.
+``` 
+>> yarn
+yarn install v1.22.5
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+Done in 142.36s.
 ```
+Navigate into folder and start project
+```
+>> cd /nuxt-copybase-pokeapi
+>> yarn dev -o
+	yarn run v1.22.5
+	$ nuxt -o
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+   ╭────────────────────────────────────────────────────────────────╮
+   │                                                                │
+   │   Nuxt @ v2.15.8                                               │
+   │                                                                │
+   │   ▸ Environment: development                                   │
+   │   ▸ Rendering:   client-side                                   │
+   │   ▸ Target:      static                                        │
+   │                                                                │
+   │   Listening: http://localhost:8887/nuxt-copybase-pokeapi/      │
+   │                                                                │
+   ╰────────────────────────────────────────────────────────────────╯
+```
+-o open dev. server in browser
 
-## Special Directories
+# Pages folder
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-### `pages`
+  
 
 This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+File tree:
+```
+index.vue
+about.vue
+--| pokemon/
+-----| _id.vue
+```
 
-### `plugins`
+# Assets page
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
 
-### `static`
+# Build project
+Current project is configured for static hosting server.
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+| nuxt.config.js |  |
+|--|--|
+|ssr:  |false  |
+|target:  |'static'  |
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+Using that configuration nuxt will compile files using `yarn generate` and compile into `/dist` folder.
+ 
 
-### `store`
+| nuxt.config.js |  |
+|--|--|
+|ssr:  |true  |
+|target:  |'server'  |
 
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+Using that configuration nuxt will compile files using `yarn build` .
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+### Reference:
+## [List of Commands](https://nuxtjs.org/docs/get-started/commands#list-of-commands)
+
+You can run different commands depending on the [target](https://nuxtjs.org/docs/features/deployment-targets) :
+
+### [target: `server` (default value)](https://nuxtjs.org/docs/get-started/commands#target-server-default-value)
+
+-   **nuxt dev** - Launch the development server.
+-   **nuxt build** - Build and optimize your application with webpack for production.
+-   **nuxt start** - Start the production server (after running `nuxt build`). Use it for Node.js hosting like Heroku, Digital Ocean, etc.
+
+### [target: `static`](https://nuxtjs.org/docs/get-started/commands#target-static)
+
+-   **nuxt dev** - Launch the development server.
+-   **nuxt generate** - Build the application (if needed), generate every route as a HTML file and statically export to `dist/` directory (used for static hosting).
+-   **nuxt start** - serve the `dist/` directory like your static hosting would do (Netlify, Vercel, Surge, etc), great for testing before deploying.

@@ -8,7 +8,11 @@
         </h2>
         <h1 v-else class="text-center">Ocorreu um erro</h1>
 
-        <img class="error-gif" src="../assets/img/urban-line-404-1.gif" alt="error page" />
+        <img
+          class="error-gif"
+          src="../assets/img/urban-line-404-1.gif"
+          alt="error page"
+        />
       </b-card-text>
 
       <b-button to="/" variant="primary" class="mt-4">Voltar</b-button>

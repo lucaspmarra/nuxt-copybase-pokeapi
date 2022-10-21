@@ -23,6 +23,8 @@
     "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
     "@babel/eslint-parser": "^7.19.1",
     "@nuxtjs/eslint-config": "^11.0.0",
     "@nuxtjs/eslint-module": "^3.1.0",
