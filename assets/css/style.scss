@@ -21,15 +21,21 @@ body {
 
 .poke-card {
   width: 550px;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+  --box-shadow-color: rgba(206, 178, 252, 0.48);
 }
 
 .poke-card-selected {
   margin-top: 20px;
   width: 500px;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+  --box-shadow-color: rgba(206, 178, 252, 0.48);
 }
 
 .about-card {
   width: 550px;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+  --box-shadow-color: rgba(206, 178, 252, 0.48);
 }
 
 .poke-text {
@@ -40,6 +46,9 @@ body {
 }
 .mobile-navbar {
   display: none;
+}
+.pokemon-photo {
+  width: 350px;
 }
 
 @media only screen and (max-width: 40em) {

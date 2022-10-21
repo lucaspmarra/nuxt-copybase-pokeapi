@@ -4,7 +4,7 @@
     <b-navbar-nav>
       <b-link to="/">
         <img
-          alt="Ir para a página Inicial da página Bem Cuidar - Eleições 2022"
+          alt="Go to home page"
           class="ml-auto poke-api-logo"
           src="../assets/img/pokeapi.png"
         />

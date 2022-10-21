@@ -2,6 +2,11 @@
   <div
     class="d-flex flex-column min-vh-100 justify-content-center align-items-center"
   >
+    <img
+      class="pokemon-photo"
+      src="../assets/img/Pokemon_brand.png"
+      alt="all starters pokemons photo"
+    />
     <article>
       <section>
         <b-card class="poke-card">

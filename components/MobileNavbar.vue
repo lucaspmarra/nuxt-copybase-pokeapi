@@ -3,7 +3,7 @@
   <b-navbar id="navbar" class="shadow navbar mobile-navbar" type="light">
     <b-navbar-brand>
       <img
-        alt="Ir para a página Inicial da página Bem Cuidar - Eleições 2022"
+        alt="Go to home page"
         class="ml-auto poke-api-logo"
         src="../assets/img/pokeapi.png"
       />
