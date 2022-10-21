@@ -1,6 +1,6 @@
 <template>
   <div
-    class="d-flex flex-column justify-content-center align-items-center id-card"
+    class="d-flex flex-column justify-content-center align-items-center pt-4 id-card"
   >
     <b-img
       class="pokemon-photo-about"

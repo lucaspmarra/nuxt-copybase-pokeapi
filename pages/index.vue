@@ -1,6 +1,6 @@
 <template>
   <div
-    class="d-flex flex-column mt-5 justify-content-center align-items-center"
+    class="d-flex flex-column pt-4 justify-content-center align-items-center"
   >
     <img
       class="pokemon-photo"
