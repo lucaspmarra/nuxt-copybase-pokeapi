@@ -69,11 +69,7 @@ export default {
         )
         this.error = false
         this.pokemon = response.data
-        // eslint-disable-next-line no-console
-        console.log(response.data)
       } catch (e) {
-        // eslint-disable-next-line no-console
-        console.log(e)
         this.error = e
       } finally {
         this.loading = false

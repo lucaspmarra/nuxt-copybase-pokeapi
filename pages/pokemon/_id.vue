@@ -109,10 +109,10 @@ export default {
     }
   },
   mounted() {
-    this.onSubmit()
+    this.onRoute()
   },
   methods: {
-    async onSubmit() {
+    async onRoute() {
       try {
         const response = await this.$axios.get(
           `https://pokeapi.co/api/v2/pokemon/${this.$route.params.id}`
