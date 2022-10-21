@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <b-navbar id="navbar" class="shadow navbar" toggleable="sm" type="light">
+  <b-navbar id="navbar" class="shadow navbar fixed-top" toggleable="sm" type="light">
     <b-navbar-nav>
       <b-link to="/">
         <img
